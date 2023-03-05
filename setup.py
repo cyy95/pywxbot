@@ -1,6 +1,19 @@
+import os
+import sys
 from typing import List
 
 import setuptools
+
+
+def setup_path(path=""):
+    # get the path to the setup file
+    setup_path = os.path.abspath(os.path.split(__file__)[0])
+
+    return os.path.join(setup_path, path)
+
+
+# add it to the system path
+sys.path.append(setup_path())
 
 
 def get_long_description() -> str:
@@ -16,8 +29,8 @@ def get_install_requires() -> List[str]:
 
 
 setuptools.setup(
-    name="wxbot-win",
-    version="0.0.1",
+    name="pywxbot",
+    version="0.0.3",
     author="cyy95",
     author_email="949777915@qq.com",
     description="A wechat bot SDK for windows",
@@ -31,7 +44,7 @@ setuptools.setup(
     ],
     install_requires=['pywinauto', 'psutil', 'pyperclip', 'pyautogui'],
     python_requires='>=3.6',
-    package_dir={'wxbot-win': 'src/wxbot-win'},
+    package_dir={'pywxbot': 'src/pywxbot'},
     packages=setuptools.find_packages(where='src', exclude=['__pycache__', '.mypy_cache']),
     platforms=['Windows'],
 )
