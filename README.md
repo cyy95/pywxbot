@@ -43,4 +43,4 @@ app.run()
 ```
 ## Examples
 
-- [OpenAi的ChatGPT接入微信群](http://github.com/cyy95/pywxbot/blob/master/examples/auto_reply.py)
+- [OpenAi的ChatGPT群机器人](http://github.com/cyy95/pywxbot/blob/master/examples/chatgpt.py)
