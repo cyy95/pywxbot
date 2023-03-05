@@ -13,7 +13,7 @@ class Message:
         self.is_self = is_myself
 
     def __str__(self):
-        return f'{self.nick_name}:{self.txt},is_myself:{ self.is_self}'
+        return f'{self.nick_name}:{self.txt},is_self:{ self.is_self}'
 
     def __eq__(self, other):
         return self.nick_name == other.nick_name and self.txt == other.txt and self.is_self == other.is_self

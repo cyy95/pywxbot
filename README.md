@@ -2,6 +2,7 @@
 
 pywxbot 是一个微信机器人框架,通过模拟鼠标键盘操作微信Window客户端实现自动回复等功能。
 
+市面上有许多基于微信网页版实现的微信机器人，但是网页版的十分不稳定，经常会被官方封禁。
 ## 特性
 
 - [x] 消息监听
@@ -40,3 +41,6 @@ def auto_reply(msg):
 
 app.run()
 ```
+## Examples
+
+- [OpenAi的ChatGPT接入微信群](http://github.com/cyy95/pywxbot/blob/master/examples/auto_reply.py)
