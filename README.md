@@ -17,7 +17,7 @@ pywxbot 是一个微信机器人框架,通过模拟鼠标键盘操作微信Windo
 
 可以通过本命令安装pywxbot：
 
-`pip install  pywxbot -i https://pypi.douban.com/simple/`
+`pip install  pywxbot -i https://pypi.tuna.tsinghua.edu.cn/simple`
 
 ### 使用实例
 

@@ -1,4 +1,4 @@
-import src.pywxbot as wxbot
+import pywxbot as wxbot
 
 app = wxbot.WxBot()
 
