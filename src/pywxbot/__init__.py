@@ -10,13 +10,13 @@ class Message:
     def __init__(self, nick_name, txt, is_myself=False):
         self.nick_name = nick_name
         self.txt = txt
-        self.is_myself = is_myself
+        self.is_self = is_myself
 
     def __str__(self):
-        return f'{self.nick_name}:{self.txt},is_myself:{ self.is_myself}'
+        return f'{self.nick_name}:{self.txt},is_myself:{ self.is_self}'
 
     def __eq__(self, other):
-        return self.nick_name == other.nick_name and self.txt == other.txt and self.is_myself == other.is_myself
+        return self.nick_name == other.nick_name and self.txt == other.txt and self.is_self == other.is_self
 
 
 class WxBot:
@@ -33,6 +33,7 @@ class WxBot:
             raise Exception('WeChat is not running')
         self.app = Application(backend="uia").connect(process=pid)
         self.win = self.app[u'微信']
+        self.win.set_focus()
 
     def watch(self, name):
         def decorator(func):
